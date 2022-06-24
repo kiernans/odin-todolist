@@ -51,15 +51,32 @@ const DOM = (() => {
         main.appendChild(sidebar);
     };
 
+    const createContent = () => {
+        const main = document.querySelector('.main');
+        const content = document.createElement('div');
+        content.classList.add('content');
+        main.appendChild(content);
+    };
+
+    const displayContent = (title) => {
+        const container = document.querySelector('.content');
+        const content = document.createElement('h1');
+        content.textContent = title;
+        container.appendChild(content);
+
+    };
+
     const setup = () => {
         createContainer();
         createTitle();
         createMain();
         createSidebar();
+        createContent();
     }
 
     return {
         setup,
+        displayContent,
     };
 })();
 
