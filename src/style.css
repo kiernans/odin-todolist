@@ -1,0 +1,38 @@
+:root {
+    --header-background: #4a6274;
+    --sidebar-background: #d294af;
+}
+
+body, 
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: grid;
+    height: 100%;
+    grid-template-rows: 1fr 5fr;
+}
+
+.header {
+    display: flex;
+    background-color: var(--header-background);
+    color: white;
+    align-items: center;
+    padding: 25px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.sidebar {
+    display: flex;
+    background-color: var(--sidebar-background);
+    padding: 25px;
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+}

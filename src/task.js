@@ -1,4 +1,4 @@
-const ToDoList = (initTitle, initDescription, initDueDate, initPriority) => {
+const Task = (initTitle, initDescription, initDueDate, initPriority) => {
     let title = initTitle;
     let description = initDescription;
     let dueDate = initDueDate;
@@ -28,4 +28,4 @@ const ToDoList = (initTitle, initDescription, initDueDate, initPriority) => {
     };
 };
 
-export default ToDoList;
+export default Task;
