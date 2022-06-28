@@ -32,9 +32,6 @@ const DOM = (() => {
         const week = document.createElement('button');
         week.classList.add('week');
         week.textContent = 'This week';
-        const month = document.createElement('button');
-        month.classList.add('month');
-        month.textContent = 'This month';
         const projects = document.createElement('div');
         projects.classList.add('projects');
         const projectTitle = document.createElement('h1');
@@ -44,7 +41,6 @@ const DOM = (() => {
         add.textContent = '+ Add Project';
         sidebar.appendChild(today);
         sidebar.appendChild(week);
-        sidebar.appendChild(month);
         projects.appendChild(projectTitle);
         sidebar.appendChild(projects);
         sidebar.appendChild(add);
@@ -66,6 +62,27 @@ const DOM = (() => {
 
     };
 
+    const displayProjectForm = () => {
+        const projects = document.querySelector('.projects');
+        const form = document.createElement('form');
+        const name = document.createElement('input');
+        const add = document.createElement('button');
+        const cancel = document.createElement('button');
+        name.type = 'text';
+        name.classList.add('project-name');
+        name.placeholder = 'Project Name';
+        add.classList.add('add-project');
+        add.textContent = 'Add';
+        add.style.margin = '10px';
+        cancel.classList.add('cancel-project');
+        cancel.textContent = 'Cancel';
+        cancel.style.margin = '10px';
+        form.appendChild(name);
+        form.appendChild(add);
+        form.appendChild(cancel);
+        projects.appendChild(form);
+    }; 
+
     const setup = () => {
         createContainer();
         createTitle();
@@ -77,6 +94,7 @@ const DOM = (() => {
     return {
         setup,
         displayContent,
+        displayProjectForm,
     };
 })();
 

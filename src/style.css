@@ -46,6 +46,6 @@ html {
     width: 100px;
 }
 
-.sidebar button:active {
+.sidebar button.active {
     background-color: rgb(255, 255, 255);
 }
