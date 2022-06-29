@@ -81,7 +81,21 @@ const DOM = (() => {
         form.appendChild(add);
         form.appendChild(cancel);
         projects.appendChild(form);
-    }; 
+    };
+
+    const displayNewProject = (projectName) => {
+        const container = document.querySelector('.projects');
+        const newProject = document.createElement('div');
+        newProject.classList.add('new-project');
+        newProject.textContent = projectName;
+        container.appendChild(newProject);
+    };
+    
+    const removeForm = () => {
+        const container = document.querySelector('.projects');
+        const form = document.querySelector('.projects form');
+        container.removeChild(form);
+    };
 
     const setup = () => {
         createContainer();
@@ -95,6 +109,8 @@ const DOM = (() => {
         setup,
         displayContent,
         displayProjectForm,
+        displayNewProject,
+        removeForm,
     };
 })();
 
